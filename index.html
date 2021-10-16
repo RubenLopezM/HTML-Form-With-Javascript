@@ -7,12 +7,9 @@
   <script src="https://kit.fontawesome.com/d9199552cf.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
+ <main>
 
-</header>
-<main>
-
-  <div class="container">
+   <div class="container">
     <form class="row g-3 mt-4 border rounded">
         <div class="col-12 border bg-light mt-0 p-2 ps-4">
            <h2>Payment form example</h2>
@@ -33,9 +30,8 @@
             <label for="inputamount" class="form-label">Amount</label>
             <div class="d-flex">
               <i class="fas fa-dollar-sign my-2"></i>
-              <input type="password" class="form-control" id="inputamount" placeholder="Amount" required="true">
-            </div>
-            
+              <input type="number" class="form-control" id="inputamount" placeholder="Amount" required="true">
+            </div>    
         </div>
         <div class="col-6">
           <label for="inputfirstname" class="form-label">First Name</label>
@@ -52,9 +48,12 @@
         <div class="col-3">
           <label for="selectstate" class="form-label">State</label>
           <br>
-          <select name="select" id="selectstate" size="list box" class="border rounded selection">
-            <option value="value1" selected>Pick a state</option>
-          </select>
+            <input list="States" name="mystate" placeholder="Pick a state" class="border rounded-3 py-1 selection" /></label>
+            <datalist id="States">
+              <option value="Florida">
+              <option value="Texas">
+              <option value="Washington">
+            </datalist>
         </div>
         <div class="col-md-3">
           <label for="inputpostalcode" class="form-label">Postal Code</label>
@@ -76,7 +75,7 @@
         <div class="col-md-6 offset-md-3 d-flex flex-column">
           <label for="inputmessage" class="form-label">Message</label>
           <textarea id="inputmessage" name="message" rows="4" cols="45" class="border"></textarea>
-          <nav class="text-muted">Add any notes here.</nav>
+          <span class="text-muted">Add any notes here.<span>
         </div>
         <div class="col-md-12">
          
@@ -85,12 +84,12 @@
           
         </div>
         <div class="col-12 ps-6 mb-0 py-2 d-grid gap-2 d-md-flex justify-content-md-end border-bottom bg-light ">
-            <button type="submit" class="btn btn-secondary me-2 mb-2">Cancel</button>
-            <button type="submit" class="btn btn-primary mb-2 me-2">Send</button>
+            <input type="reset" class="btn btn-secondary me-2 mb-2" value="Cancel"></input>
+            <input type="submit" class="btn btn-primary mb-2 me-2" value="Send"></input>
         </div>
-      </form> 
-    </div>
-</main>
+    </form> 
+   </div>
+ </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

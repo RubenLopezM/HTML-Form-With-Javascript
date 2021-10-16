@@ -1,22 +1,6 @@
 div p{
     background: #dc354641;
 }
-select{
-    width: 240px;
-    height: 37px;
-}
 .selection{
-        width: 100%;
-        border: 1px solid #efefef;
-        box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-        background: #fff url('https://www.freeiconspng.com/uploads/arrow-up-icon-23.png') no-repeat;
-        background-size: 15px;
-        background-position:  right 10px center;
-        padding-left: 15px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
+    width: 250px;
 }
