@@ -4,3 +4,6 @@ div p{
 .selection{
     width: 250px;
 }
+.success{
+    background: #5fe44d41;
+}

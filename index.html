@@ -8,56 +8,57 @@
 </head>
 <body>
  <main>
-
    <div class="container">
-    <form class="row g-3 mt-4 border rounded">
+    <form class="row g-3 mt-4 border rounded" id="MYFORM">
         <div class="col-12 border bg-light mt-0 p-2 ps-4">
            <h2>Payment form example</h2>
         </div>
         <div class="col-12 py-1">
-            <p class="py-2 text-danger px-2 rounded">Some fields are missing</p>
+            <p id="warning" class="py-2 text-danger px-2 rounded visually-hidden">Some fields are missing</p>
+            <p id="success" class="py-2 text-success px-2 rounded visually-hidden success">Everything is correct</p>
         </div>
 
         <div class="col-md-4">
-          <label for="cardnumber" class="form-label">Card #</label>
-          <input type="text" class="form-control" id="cardnumber" placeholder="XXXXXXXXXXXXXXXX" size="16" aria-required="true" required="true">
+          <label for="card" class="form-label">Card #</label>
+          <input type="text" class="form-control" id="card" placeholder="XXXXXXXXXXXXXXXX" aria-required="true">
         </div>
         <div class="col-md-4">
-          <label for="cvcnumber" class="form-label">CVC #</label>
-          <input type="password" class="form-control" id="cvcnumber" placeholder="0000" aria-required="true" required="true">
+          <label for="cvc" class="form-label">CVC #</label>
+          <input type="password" class="form-control" id="cvc" placeholder="0000" aria-required="true">
         </div>
         <div class="col-md-4">          
-            <label for="inputamount" class="form-label">Amount</label>
+            <label for="amount" class="form-label">Amount</label>
             <div class="d-flex">
               <i class="fas fa-dollar-sign my-2"></i>
-              <input type="number" class="form-control" id="inputamount" placeholder="Amount" required="true">
+              <input type="number" class="form-control" id="amount" placeholder="Amount">
             </div>    
         </div>
         <div class="col-6">
-          <label for="inputfirstname" class="form-label">First Name</label>
-          <input type="text" class="form-control" id="inputfirstname" required="true">
+          <label for="FirstName" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="FirstName">
         </div>
         <div class="col-6">
-            <label for="inputlastname" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="inputlastname" required="true">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName">
           </div>
         <div class="col-6">
-            <label for="inputcity" class="form-label">City</label>
-            <input type="text" class="form-control" id="inputcity">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" id="city">
           </div>
-        <div class="col-3">
-          <label for="selectstate" class="form-label">State</label>
-          <br>
-            <input list="States" name="mystate" placeholder="Pick a state" class="border rounded-3 py-1 selection" /></label>
-            <datalist id="States">
-              <option value="Florida">
-              <option value="Texas">
-              <option value="Washington">
-            </datalist>
+          <div class="col-3">
+            <label for="exampleDataList" class="form-label">Datalist example</label>
+                <input class="form-control" list="datalistOptions" id="state" placeholder="Pick a state">
+                <datalist id="datalistOptions">
+                <option value="Texas">
+                <option value="Florida">
+                <option value="Seattle">
+                <option value="Los Angeles">
+                <option value="Washington">
+                </datalist>   
         </div>
         <div class="col-md-3">
-          <label for="inputpostalcode" class="form-label">Postal Code</label>
-          <input type="text" class="form-control" id="inputpostalcode">
+          <label for="postalCode" class="form-label">Postal Code</label>
+          <input type="text" class="form-control" id="postalCode">
         </div>
         <div class="col-md-3 pe-4">
           <nav>We accept:</nav>
@@ -73,8 +74,8 @@
             </div>
         </div>
         <div class="col-md-6 offset-md-3 d-flex flex-column">
-          <label for="inputmessage" class="form-label">Message</label>
-          <textarea id="inputmessage" name="message" rows="4" cols="45" class="border"></textarea>
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" rows="4" cols="45" class="border"></textarea>
           <span class="text-muted">Add any notes here.<span>
         </div>
         <div class="col-md-12">
@@ -84,12 +85,13 @@
           
         </div>
         <div class="col-12 ps-6 mb-0 py-2 d-grid gap-2 d-md-flex justify-content-md-end border-bottom bg-light ">
-            <input type="reset" class="btn btn-secondary me-2 mb-2" value="Cancel"></input>
-            <input type="submit" class="btn btn-primary mb-2 me-2" value="Send"></input>
+            <input type="reset" class="btn btn-secondary me-2 mb-2" id="reset" value="Cancel"></input>
+            <input type="submit" id="submit" class="btn btn-primary mb-2 me-2" value="Send"></input>
         </div>
     </form> 
    </div>
  </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="app.js"></script>
 </body>
 </html>
